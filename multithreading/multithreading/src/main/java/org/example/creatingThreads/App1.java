@@ -10,7 +10,7 @@ public class App1 implements Runnable
     public void run() {
         for (int i = 0; i < 100; i++) {
             if (i == 5) {
-                return;
+                return; //exit
             }
             try {
                 Thread.sleep(1000);
