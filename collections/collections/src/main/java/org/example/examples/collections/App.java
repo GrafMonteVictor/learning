@@ -1,4 +1,4 @@
-package org.example.simpleExamples;
+package org.example.examples.collections;
 
 /**
  * Hello world!

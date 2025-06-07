@@ -1,4 +1,4 @@
-package tasks.predicate;
+package org.example.examples.predicate;
 
 import java.util.Arrays;
 import java.util.List;
