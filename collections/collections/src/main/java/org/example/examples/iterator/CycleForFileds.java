@@ -1,7 +1,5 @@
 package org.example.examples.iterator;
 
-import java.lang.classfile.FieldElement;
-import java.lang.reflect.Field;
 
 public class CycleForFileds {
     public static void main(String[] args) {
