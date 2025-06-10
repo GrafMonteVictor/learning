@@ -18,9 +18,6 @@ public class Example {
         Cat cat2 = new Cat(3, "Тимон");
         Cat cat3 = new Cat(1, "Тимон");
         Cat cat4 = new Cat(1, "Тимон");
-//        Set<Cat> set2 = new HashSet<>(Set.of(cat1, cat2));
-//        Set<Cat> set3 = new HashSet<>(Set.of(new Cat()));
-//        Set<Cat> set2 = new HashSet<>(Arrays.asList(new Cat(4, "Ракета"), new Cat(3, "Тимон")));
         Set<Cat> set2 = new HashSet<>();
         set2.add(cat1);
         set2.add(cat2);
@@ -28,10 +25,6 @@ public class Example {
         set2.add(cat4);
         System.out.println(cat3.equals(cat4));
         System.out.println(cat3.hashCode() == cat4.hashCode());
-//        System.out.println(set2);
-//        cat3 = cat4;
-//        System.out.println(cat3.hashCode());
-//        System.out.println(cat4.hashCode());
         for (Cat cat: set2) {
             System.out.println(cat);
         }
