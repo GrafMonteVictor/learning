@@ -23,10 +23,17 @@ public class Example {
         set2.add(cat2);
         set2.add(cat3);
         set2.add(cat4);
-        System.out.println(cat3.equals(cat4));
-        System.out.println(cat3.hashCode() == cat4.hashCode());
-        for (Cat cat: set2) {
-            System.out.println(cat);
-        }
+//        System.out.println(cat3.equals(cat4));
+//        System.out.println(cat3.hashCode() == cat4.hashCode());
+        set2.forEach(System.out::println);
+        System.out.println();
+
+        cat1.setName("Тимон");
+        cat1.setWeight(3);
+        System.out.println(cat1.equals(cat2));
+        System.out.println(cat1.hashCode() == cat2.hashCode());
+        set2.forEach(System.out::println);
+
+
     }
 }

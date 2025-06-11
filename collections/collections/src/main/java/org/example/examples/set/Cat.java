@@ -1,13 +1,15 @@
 package org.example.examples.set;
 
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Objects;
 
 @Getter
+@Setter
 class Cat {
-    int weight;
-    String name;
+    private int weight;
+    private String name;
 
     public Cat(int weight, String name) {
         this.weight = weight;
