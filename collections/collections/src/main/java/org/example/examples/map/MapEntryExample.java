@@ -18,5 +18,12 @@ public class MapEntryExample {
             System.out.println(item.getKey());
             System.out.println(item.getValue());
         }
+        for (var item: customersSet) {
+            if (item.getValue() > 100) {
+                item.setValue(item.getValue() - 10);
+            }
+            System.out.println(item.getKey());
+            System.out.println(item.getValue());
+        }
     }
 }

@@ -7,7 +7,7 @@ import java.util.Objects;
 
 @Getter
 @Setter
-class Cat {
+public class Cat {
     private int weight;
     private String name;
 
