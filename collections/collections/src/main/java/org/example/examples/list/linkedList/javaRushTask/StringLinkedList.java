@@ -13,22 +13,18 @@ public class StringLinkedList {
     }
 
     public void add(String value) {
-        //создаем новую ноду
-        //next prevNode = текущая нода
-        //для текущей ноды: prev = prevNode; next = null
         Node newNode = new Node();
         if (first.next != null) {
-            Node preNewNode = last.prev;
-            preNewNode.next = newNode;
-            newNode.prev = preNewNode;
+            Node prelastNode = last.prev; //задаем предпоследний элемент
+            prelastNode.next = newNode; //поле предпоследнего элемента ссылается на новую ноду
+            newNode.prev = prelastNode; //указываем в новой ноде, что предыдущий элемент - предпоследний
         } else {
             first.next = newNode;
             newNode.prev=first;
         }
         newNode.value = value;
-        newNode.next=last;
-        last.prev = newNode;
-//        LinkedList
+        newNode.next=last; //новый элемент всегда ссылается на last
+        last.prev = newNode; //last ссылается на новый элемент
     }
 
     public static class Node {
