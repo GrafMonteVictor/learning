@@ -1,4 +1,4 @@
-package org.example.examples.list.linkedList.javaRushTask;
+package org.example.examples.list.linkedList.javaRushTask_1;
 
 public class StringLinkedList {
     private Node first = new Node();

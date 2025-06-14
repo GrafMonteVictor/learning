@@ -33,7 +33,5 @@ public class Example {
         System.out.println(cat1.equals(cat2));
         System.out.println(cat1.hashCode() == cat2.hashCode());
         set2.forEach(System.out::println);
-
-
     }
 }

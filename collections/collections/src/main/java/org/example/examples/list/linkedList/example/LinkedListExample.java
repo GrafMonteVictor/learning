@@ -1,4 +1,4 @@
-package org.example.examples.list.linkedList;
+package org.example.examples.list.linkedList.example;
 
 import org.example.examples.set.Cat;
 
