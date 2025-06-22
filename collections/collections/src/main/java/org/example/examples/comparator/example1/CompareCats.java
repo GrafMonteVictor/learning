@@ -23,5 +23,9 @@ public class CompareCats {
         System.out.println("сортировка comparable класса по имени");
         Collections.sort(catList);
         System.out.println(catList);
+
+        System.out.println("обратный порядок comparable");
+        Collections.reverse(catList);
+        System.out.println(catList);
     }
 }
