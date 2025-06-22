@@ -1,8 +1,7 @@
 package org.example.examples.set;
 
-import lombok.var;
+import org.example.examples.Cat;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

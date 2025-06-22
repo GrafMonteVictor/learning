@@ -1,6 +1,6 @@
 package org.example.examples.list.linkedList.example;
 
-import org.example.examples.set.Cat;
+import org.example.examples.Cat;
 
 import java.util.LinkedList;
 import java.util.List;
