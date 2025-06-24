@@ -1,16 +1,42 @@
 package org.example.lambda.functionalInterface;
 
 public class StringProcessor {
-    private StringOperation stringOperation;
+    private LengthChecker lengthChecker;
+    private CharacterReplacer characterReplacer;
+    private UpperCaseConverter upperCaseConverter;
 
-    public void setStringOperation(StringOperation stringOperation) {
-        this.stringOperation = stringOperation;
+    // Сеттеры для установки функциональных интерфейсов
+    public void setLengthChecker(LengthChecker lengthChecker) {
+        this.lengthChecker = lengthChecker;
     }
 
-    // Публичный метод для обработки строки, использующий внедренные операции
+    public void setUpperCaseConverter(UpperCaseConverter upperCaseConverter) {
+        this.upperCaseConverter = upperCaseConverter;
+    }
+
+    public void setCharacterReplacer(CharacterReplacer characterReplacer) {
+        this.characterReplacer = characterReplacer;
+    }
+
+    // Основной метод, который выполняет все операции
     public String process(String input) {
-        stringOperation.checkLength(input);    // Проверка длины
-        input = stringOperation.toUpperCase(input);    // Преобразование в верхний регистр
-        return stringOperation.replaceCharacters(input, 'O', '0'); // Замена символов
+        // Выполняем проверку длины
+        if (lengthChecker != null) {
+            lengthChecker.checkLength(input);
+        } else {
+            System.out.println("LengthChecker is not set!");
+        }
+
+        // Преобразуем строку в верхний регистр
+        if (upperCaseConverter != null) {
+            input = upperCaseConverter.toUpperCase(input);
+        }
+
+        // Заменяем символы
+        if (characterReplacer != null) {
+            input = characterReplacer.replaceCharacters(input, 'O', '0');
+        }
+
+        return input;  // Возвращаем результат после всех преобразований
     }
 }

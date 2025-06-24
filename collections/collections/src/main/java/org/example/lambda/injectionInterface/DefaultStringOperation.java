@@ -1,4 +1,4 @@
-package org.example.lambda.functionalInterface;
+package org.example.lambda.injectionInterface;
 
 public class DefaultStringOperation implements StringOperation {
     @Override
