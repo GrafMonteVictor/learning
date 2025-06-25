@@ -5,7 +5,7 @@ public class Main {
         StringProcessor sp = new StringProcessor();
         sp.setCharacterReplacer((input, oldChar, newChar) -> input.replace(oldChar, newChar));
 
-        sp.setLengthChecker(input -> {
+        sp.setLengthChecker(input -> { //иницилаизация лямбды но не её выполнение
             if (input.length() > 10) {
                 System.out.println("String is too long!");
             } else {
@@ -13,9 +13,11 @@ public class Main {
             }
         });
 
-        sp.setUpperCaseConverter(input -> {
+        sp.setUpperCaseConverter((String input) -> {
             return input.toUpperCase();
         });
+
+        sp.setUpperCaseConverter(String::toUpperCase);
 
         String result = sp.process("просто так");
         System.out.println(result);
