@@ -1,6 +1,6 @@
 package org.example.lambda.functionalInterface;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         StringProcessor sp = new StringProcessor();
         sp.setCharacterReplacer((input, oldChar, newChar) -> input.replace(oldChar, newChar));
