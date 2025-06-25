@@ -1,4 +1,4 @@
-package org.example.lambda.functionalInterface;
+package org.example.lambda.lambdas;
 
 public class Main2 {
     public static void main(String[] args) {
