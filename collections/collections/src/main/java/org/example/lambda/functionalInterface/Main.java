@@ -15,7 +15,7 @@ public class Main {
         Consumer<String> print2 = System.out::println; //консюмер - ничего не возвращает
         print1.accept("что это");
 
-        Supplier<Double> generateRandom = Math::random; //поставщик чисел, бананов, шлюх
+        Supplier<Double> generateRandom = Math::random; //поставщик генератор чисел, бананов, шлюх
         System.out.println(generateRandom.get());
 
         UnaryOperator<Integer> x2 = integer -> integer / 2; //унарный оператор - работающий с одним типом/аргусментом
