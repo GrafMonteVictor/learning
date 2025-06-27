@@ -1,4 +1,4 @@
-package org.example.lambda.lambdas;
+package org.example.streamAPI.lambdas;
 
 @FunctionalInterface
 public interface LengthChecker {

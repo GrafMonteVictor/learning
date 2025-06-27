@@ -1,10 +1,9 @@
-package org.example.lambda.methodReferances;
+package org.example.streamAPI.methodReferences;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static java.lang.StringUTF16.newString;
 
 public class Main {
     public static void main(String[] args) {

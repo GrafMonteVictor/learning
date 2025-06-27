@@ -1,4 +1,4 @@
-package org.example.lambda.injectionInterface;
+package org.example.streamAPI.injectionInterface;
 
 public class Main {
     public static void main(String[] args) {

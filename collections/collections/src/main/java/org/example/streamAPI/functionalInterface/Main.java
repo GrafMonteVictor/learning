@@ -1,4 +1,4 @@
-package org.example.lambda.functionalInterface;
+package org.example.streamAPI.functionalInterface;
 
 import java.util.function.*;
 

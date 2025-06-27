@@ -1,4 +1,4 @@
-package org.example.lambda.lambdas;
+package org.example.streamAPI.lambdas;
 
 public class Main1 {
     public static void main(String[] args) {
