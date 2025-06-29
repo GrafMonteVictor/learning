@@ -33,8 +33,19 @@ public class GroupingBy {
                 );
 
         for (Map.Entry entry: listCatGroupingByWeight2.entrySet()) {
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue());
+//            System.out.println(entry.getKey());
+//            System.out.println(entry.getValue());
+            System.out.println(entry);
+        }
+
+        //Collector.counting()
+        Map<Integer, Long> mapCatCountingByWeight = listCat.stream()
+                .collect(Collectors.groupingBy(
+                   Cat::getWeight, Collectors.counting()
+                ));
+
+        for (Map.Entry entry : mapCatCountingByWeight.entrySet()) {
+            System.out.println(entry);
         }
     }
 }
