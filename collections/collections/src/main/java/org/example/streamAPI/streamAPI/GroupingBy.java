@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 public class GroupingBy {
     public static void main(String[] args) {
         List<Cat> listCat = Arrays.asList(
-                new Cat(4, "raketka"),
-                new Cat(3, "timon"),
-                new Cat(3, "princessa"),
-                new Cat(6, "rocket")
+                new Cat(4, "raketka", "britain"),
+                new Cat(3, "timon", "noname"),
+                new Cat(3, "princessa", "britain"),
+                new Cat(6, "rocket", "britain")
 
         );
 //Collectors.groupingBy(Cat::getWeight, Collectors.toList())
@@ -33,8 +33,6 @@ public class GroupingBy {
                 );
 
         for (Map.Entry entry: listCatGroupingByWeight2.entrySet()) {
-//            System.out.println(entry.getKey());
-//            System.out.println(entry.getValue());
             System.out.println(entry);
         }
 
@@ -45,6 +43,17 @@ public class GroupingBy {
                 ));
 
         for (Map.Entry entry : mapCatCountingByWeight.entrySet()) {
+            System.out.println(entry);
+        }
+
+        //avgWeightByNameSpecies
+        Map<String, Double> mapAvgWeightByNameSpecies = listCat.stream()
+                .collect(Collectors.groupingBy(
+                        Cat::getNameSpecies,
+                        Collectors.averagingInt(Cat::getWeight))
+                );
+        System.out.println("mapAvgWeightByNameSpecies");
+        for (Map.Entry entry : mapAvgWeightByNameSpecies.entrySet()) {
             System.out.println(entry);
         }
     }

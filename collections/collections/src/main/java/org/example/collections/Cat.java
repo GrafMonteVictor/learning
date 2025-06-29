@@ -10,10 +10,17 @@ import java.util.Objects;
 public class Cat implements Comparable<Cat>{
     private int weight;
     private String name;
+    private String nameSpecies;
 
     public Cat(int weight, String name) {
         this.weight = weight;
         this.name = name;
+    }
+
+    public Cat(int weight, String name, String nameSpecies) {
+        this.weight = weight;
+        this.name = name;
+        this.nameSpecies = nameSpecies;
     }
 
     @Override
