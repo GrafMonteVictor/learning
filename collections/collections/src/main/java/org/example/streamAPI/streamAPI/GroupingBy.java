@@ -56,5 +56,19 @@ public class GroupingBy {
         for (Map.Entry entry : mapAvgWeightByNameSpecies.entrySet()) {
             System.out.println(entry);
         }
+
+        //группировка по имени породы с выведением списка имен кошек
+        Map<String, String> mapOfGroupingByNameSpeciesWithListStringNames = listCat.stream()
+                .collect(Collectors.groupingBy(
+                    Cat::getNameSpecies,
+                    Collectors.mapping(
+                        Cat::getName,
+                        Collectors.joining(", ")
+                    )
+                ));
+        System.out.println("mapOfGroupingByNameSpeciesWithListStringNames");
+        for (Map.Entry entry : mapOfGroupingByNameSpeciesWithListStringNames.entrySet()) {
+            System.out.println(entry);
+        }
     }
 }
