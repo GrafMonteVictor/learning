@@ -6,7 +6,8 @@
         <jsp:setProperty name = "javaBean" property = "name" value = "Гоша"/>
         <jsp:setProperty name = "javaBean" property = "age" value = "12"/>
         <p>
-            Имя: <jsp:getProperty name = "javaBean" property = "name"/>, возраст: <jsp:getProperty name = "javaBean" property = "age"/>
+            Имя: <jsp:getProperty name = "javaBean" property = "name"/>, возраст: <jsp:getProperty name = "javaBean" property = "age"/
+            >
         </p>
     </center>
 </body>
