@@ -5,12 +5,12 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
+@Table(name = "humans")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Getter
 @Setter
-@Table(name = "humans")
 public class Human {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
